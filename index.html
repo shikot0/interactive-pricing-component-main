@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    
+  <h1 id="page-heading">Simple, traffic-based pricing</h1>
+  <p>Sign-up for our 30-day trial. No credit card required.</p> 
+
+  <section> 
+    <div id="pricing-section">
+      <div id="pricing-conversion-section">
+        <p><span id="pageviews"></span> PAGEVIEWS</p>
+        <p><span id="big">$<span id="price"></span></span>/month</p>
+        <input type="range" id="slider" value="495000" min="10000" max="1000000" step="10000">
+      </div> 
+      <div id="billing-section">
+        Monthly Billing
+        <input type="checkbox" id="billing-type">
+        <span id="yearly-billing">Yearly Billing</span>
+      </div>
+    </div>
+  <footer>
+    <div id="features-section">
+      <div class="features">
+        <img src="images/icon-check.svg" alt="">
+        <p>Unlimited websites</p>
+      </div>
+      <div class="features">
+        <img src="images/icon-check.svg" alt="">
+        <p>100% data ownership</p>
+      </div>
+      <div class="features">
+        <img src="images/icon-check.svg" alt="">
+        <p>Email reports</p>
+      </div>
+    </div>
+    <button id="start-trial-btn">Start my trial</button>
+  </footer>
+  </section>
+  
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">shikoto</a>.
+  </div>
+</body>
+</html>
