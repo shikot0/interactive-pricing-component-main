@@ -76,9 +76,12 @@ section {
     border-radius: 10px; 
     background: hsl(224, 65%, 95%);
     outline: none;
-    opacity: .8;
-    -webkit-transition: .2s;
+    opacity: .8; 
+    -webkit-transition: .2s; 
     transition: opacity .2s;
+} 
+#slider::-moz-range-progress {
+    background-color: hsl(174, 71%, 34%);
 }
 #slider::-webkit-slider-thumb:active {
     background: url(images/icon-slider.svg),hsl(174, 71%, 34%);
@@ -98,12 +101,16 @@ section {
     background-position: center;
     cursor: pointer; 
     border-radius: 50px;
-    filter: drop-shadow(0 15px 15px hsl(174, 86%, 45%))
+    filter: drop-shadow(0 15px 15px hsl(174, 86%, 45%));
 }
-.slider::-moz-range-thumb {
+#slider::-moz-range-thumb {
+    background: url(images/icon-slider.svg),hsl(174, 86%, 45%);
+    filter: drop-shadow(0 15px 15px hsl(174, 86%, 45%));
+    background-repeat: no-repeat;
+    background-position: center;
     width: 35px;
     height: 35px;
-    background: hsl(174, 86%, 45%);
+    border-radius: 50px;
     cursor: pointer;
 }
 #billing-section {
