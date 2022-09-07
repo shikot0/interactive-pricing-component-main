@@ -7,14 +7,8 @@ const yearlyBilling = document.getElementById('billing-type')
 let value;
 let initialCost;
 slider.addEventListener('input', () => {
-
-    if(slider.value.length == 5) {
-        value = `${slider.value.slice(0,2)}K`;
-    }else if(slider.value.length > 5 && slider.value.length < 7) {
-        value = `${slider.value.slice(0,3)}K`;
-    }else if(slider.value.length == 7) {
-        value = `${slider.value.slice(0,1)}M`;
-    }
+    value = Intl.NumberFormat('en', {notation: 'compact'}).format(slider.value);
+    
     if(slider.value >= 10000 && slider.value < 50000) {
         initialCost = 8;
     }else if(slider.value >= 50000 && slider.value < 100000) {
@@ -24,7 +18,7 @@ slider.addEventListener('input', () => {
     }else if(slider.value >= 500000 && slider.value < 1000000) {
         initialCost = 24;
     }else if(slider.value == 1000000) {
-        initialCost = 36;
+        initialCost = 36; 
     }
     
     yearlyBilling.addEventListener('input', () => {
@@ -32,11 +26,11 @@ slider.addEventListener('input', () => {
             cost = initialCost * 0.75;
             price.innerText = cost;
             pageviews.innerText = value;
-        }
+        } 
         else {
             price.innerText = initialCost;
             pageviews.innerText = value;
-        }
+        } 
     })
     if(yearlyBilling.checked) {
         cost = initialCost * 0.75;
